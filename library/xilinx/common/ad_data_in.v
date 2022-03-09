@@ -197,8 +197,8 @@ module ad_data_in #(
   endgenerate
 
   generate
-  if (FPGA_TECHNOLOGY == SEVEN_SERIES) begin
-  IDDR #(.DDR_CLK_EDGE ("SAME_EDGE")) i_rx_data_iddr (
+  if (FPGA_TECHNOLOGY == SEVEN_SERIES  ) begin
+  IDDR #(.DDR_CLK_EDGE ("OPPOSITE_EDGE")) i_rx_data_iddr (
     .CE (1'b1),
     .R (1'b0),
     .S (1'b0),
